@@ -162,7 +162,9 @@ To get aggregation results it is needed to provide product id = 12345, to choose
 ######Maven command to build and run the aggregator functionality test scenario:
 From project root directory:
 
-*mvn clean install && cd reporter && mvn spring-boot:run -Dspring.profiles.active=EMBEDDED,JMX,TEST_SCENARIO*
+```bash
+mvn clean install && cd reporter && mvn spring-boot:run -Dspring.profiles.active=EMBEDDED,JMX,TEST_SCENARIO
+```
 
 [Reporter Web UI](http://localhost:8080/)
 
@@ -177,7 +179,9 @@ Aggregation is executed with provided rate (by default 20 seconds)
 ######Maven command to build and run the aggregator functionality test scenario
 From project root directory:
 
-*mvn clean install && cd reporter && mvn spring-boot:run -Dspring.profiles.active=EMBEDDED,JMX,LOAD*
+```bash
+mvn clean install && cd reporter && mvn spring-boot:run -Dspring.profiles.active=EMBEDDED,JMX,LOAD
+```
 
 [Reporter Web UI](http://localhost:8080/)
 
