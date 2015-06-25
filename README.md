@@ -121,6 +121,7 @@ Profile JMX enables export to JMX.
 #####Aggregation functionality test scenario
 
 There is a TEST_SCENARIO profile to enable aggregation functionality test scenario. In this test scenario generated the following stream of messages
+
 transaction date    | product id | transaction id  | sum
 --------------------|------------|-----------------|-------
 2015-06-14 10:15:30 |      12345 |               1 | 123.11
@@ -135,6 +136,7 @@ transaction date    | product id | transaction id  | sum
 2015-06-01 00:15:33 |      12345 |              10 | 33.44
 
 Sum by day:
+
 date         | sum
 -------------|------
 1 June 2015  | 88.20
@@ -143,12 +145,14 @@ date         | sum
 14 June 2015 | 602.57
 
 Sum by week:
+
 date           |  sum
 ---------------|------
 1-7 June 2015  | 481.83
 8-14 June 2015 | 767.67
 
 Sum by month:
+
 date      | sum
 ----------|------
 June 2015 | 1249.5
