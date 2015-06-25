@@ -1,0 +1,15 @@
+<configuration scan="true">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d %-5p [%thread] [%c{2}] %m%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="kafka" level="INFO"/>
+    <logger name="org.apache" level="INFO"/>
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="org.springframework.cassandra" level="DEBUG"/>
+    <root>
+        <level value="DEBUG"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
