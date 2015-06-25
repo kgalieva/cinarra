@@ -121,30 +121,36 @@ Profile JMX enables export to JMX.
 #####Aggregation functionality test scenario
 
 There is a TEST_SCENARIO profile to enable aggregation functionality test scenario. In this test scenario generated the following stream of messages
-transaction date | product id | transaction id | sum
---------------------|-------|---|-------
-2015-06-14 10:15:30 | 12345 | 1 | 123.11
-2015-06-14 13:11:31 | 12345 | 2 | 456.23
-2015-06-14 14:35:30 | 12345 | 3 | 23.23
-2015-06-13 16:15:00 | 12345 | 4 | 66.77
-2015-06-13 17:45:36 | 12345 | 5 | 98.33
-2015-06-05 17:17:30 | 12345 | 6 | 49.65
-2015-06-05 16:17:00 | 12345 | 7 | 254
-2015-06-05 19:55:30 | 12345 | 8 | 89.98
-2015-06-01 22:25:20 | 12345 | 9 | 54.76
-2015-06-01 00:15:33 | 12345 | 10 |33.44
+transaction date    | product id | transaction id  | sum
+--------------------|------------|-----------------|-------
+2015-06-14 10:15:30 |      12345 |               1 | 123.11
+2015-06-14 13:11:31 |      12345 |               2 | 456.23
+2015-06-14 14:35:30 |      12345 |               3 | 23.23
+2015-06-13 16:15:00 |      12345 |               4 | 66.77
+2015-06-13 17:45:36 |      12345 |               5 | 98.33
+2015-06-05 17:17:30 |      12345 |               6 | 49.65
+2015-06-05 16:17:00 |      12345 |               7 | 254
+2015-06-05 19:55:30 |      12345 |               8 | 89.98
+2015-06-01 22:25:20 |      12345 |               9 | 54.76
+2015-06-01 00:15:33 |      12345 |              10 | 33.44
 
 Sum by day:
-1 June 2015 | 88.20
-5 June 2015 | 393.63
+date         | sum
+-------------|------
+1 June 2015  | 88.20
+5 June 2015  | 393.63
 13 June 2015 | 165.10
 14 June 2015 | 602.57
 
 Sum by week:
-1-7 June 2015 | 481.83
+date           |  sum
+---------------|------
+1-7 June 2015  | 481.83
 8-14 June 2015 | 767.67
 
 Sum by month:
+date      | sum
+----------|------
 June 2015 | 1249.5
 
 To get aggregation results it is needed to provide product id = 12345, to choose aggregation period (day/week/month) and date. For periods "week" and "month" that's enough to chose any date from that period.
@@ -152,9 +158,7 @@ To get aggregation results it is needed to provide product id = 12345, to choose
 ######Maven command to build and run the aggregator functionality test scenario:
 From project root directory:
 
-'''
-mvn clean install && cd reporter && mvn spring-boot:run -Dspring.profiles.active=EMBEDDED,JMX,TEST_SCENARIO
-'''
+*mvn clean install && cd reporter && mvn spring-boot:run -Dspring.profiles.active=EMBEDDED,JMX,TEST_SCENARIO*
 
 [Reporter Web UI](http://localhost:8080/)
 
@@ -169,9 +173,7 @@ Aggregation is executed with provided rate (by default 20 seconds)
 ######Maven command to build and run the aggregator functionality test scenario
 From project root directory:
 
-'''
-mvn clean install && cd reporter && mvn spring-boot:run -Dspring.profiles.active=EMBEDDED,JMX,LOAD
-'''
+*mvn clean install && cd reporter && mvn spring-boot:run -Dspring.profiles.active=EMBEDDED,JMX,LOAD*
 
 [Reporter Web UI](http://localhost:8080/)
 
